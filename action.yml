@@ -1,10 +1,13 @@
-name: 'Kubeval Validation'
-description: 'Validates Kubernetes manifest files using kubeval'
-author: 'Dhrubajyyoti Chakraborty'
+name: "Kubeval Validation"
+description: "Validates Kubernetes manifest files using kubeval"
+author: "Dhrubajyyoti Chakraborty"
+branding:
+  icon: "check"
+  color: "black"
 inputs:
   directory:
-    description: 'Directory containing the Kubernetes manifest files'
+    description: "Directory containing the Kubernetes manifest files"
     required: true
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
