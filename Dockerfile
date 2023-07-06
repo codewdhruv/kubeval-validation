@@ -20,9 +20,11 @@ RUN curl -LO "https://get.helm.sh/helm-v3.7.0-linux-amd64.tar.gz" && \
 
 RUN apk add --no-cache git
 
-RUN curl -LO "https://github.com/kubernetes-sigs/kustomize/releases/latest/download/kustomize_linux_amd64" && \
-    chmod +x kustomize_linux_amd64 && \
-    mv kustomize_linux_amd64 /usr/local/bin/kustomize
+RUN curl -LO "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize/v4.4.0/kustomize_v4.4.0_linux_amd64.tar.gz" && \
+    tar xf kustomize_v4.4.0_linux_amd64.tar.gz && \
+    rm kustomize_v4.4.0_linux_amd64.tar.gz && \
+    mv kustomize /usr/local/bin/kustomize
+
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
