@@ -8,7 +8,7 @@ To use this action, include the following step in your workflow:
 
 ```yaml
 - name: Validate Kubernetes Manifests
-  uses: codewdhruv/kubeval-validation@v1.0.1
+  uses: codewdhruv/kubeval-validation@v1.1.1
   with:
     directory: 'path/to/manifests'
 ```
@@ -44,7 +44,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Validate Kubernetes Manifests
-        uses: codewdhruv/kubeval-validation@v1.0.1
+        uses: codewdhruv/kubeval-validation@v1.1.1
         with:
           directory: 'path/to/manifests'
 ```
